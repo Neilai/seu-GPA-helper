@@ -1,0 +1,21 @@
+{
+  "name": "seu helper",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "manifest_version": 2,
+  "permissions": ["declarativeContent","storage"],
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["http://xk.urp.seu.edu.cn/studentService/system/toMain.action"],
+      "js": ["content.js"]
+    }
+  ]
+}
